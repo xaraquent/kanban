@@ -3,7 +3,7 @@ import Links from '../Links/Links';
 import './Dropdown.scss';
 import CrossIcon from '../../assets/icon-cross.svg';
 
-const Dropdown = ({ dropdown, toggleDropdown }) => {
+const Dropdown = ({ dropdown, toggleDropdown, children }) => {
     return (
         <div className={`dropdown ${dropdown ? 'active-dropdown' : ''}`}>
             <div className='dropdown-box'>
@@ -15,7 +15,7 @@ const Dropdown = ({ dropdown, toggleDropdown }) => {
                 >
                     <img src={CrossIcon} />
                 </button>
-                <Links />
+                {children}
             </div>
         </div>
     );
