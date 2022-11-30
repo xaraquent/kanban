@@ -3,7 +3,7 @@ import './Navbar.scss';
 import IconLogo from '../../assets/icon/IconLogo';
 import { BoardContext } from '../../context/BoardContext';
 
-function Navbar() {
+function Navbar({ toggleDropdown }) {
     const { currentProject } = useContext(BoardContext);
 
     return (
@@ -12,11 +12,17 @@ function Navbar() {
                 <IconLogo />
                 <h2>Kanban</h2>
             </div>
-            <div className='navbar-boarder'>
-                <h3>{currentProject.title}</h3>
+            <div className='navbar-board-name'>
+                <h2>{currentProject.title}</h2>
             </div>
             <div className='navbar-add-ticket'>
-                <button>Add New Task</button>
+                <button
+                    onClick={() => {
+                        toggleDropdown((prev) => !prev);
+                    }}
+                >
+                    Add New Task
+                </button>
             </div>
         </div>
     );

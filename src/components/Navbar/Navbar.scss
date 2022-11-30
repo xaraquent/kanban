@@ -17,7 +17,7 @@
     }
 }
 
-.navbar-boarder{
+.navbar-board-name{
 flex: 1;
 }
 
@@ -36,4 +36,18 @@ flex: 1;
         color: var(--text-lines);
         cursor: pointer;
       }
+}
+
+@media screen and (max-width: 800px) {
+    .navbar-icon{
+        width: auto;
+        h2{
+            display: none;
+        }
+    }
+    .navbar-board-name {
+        h2 {
+            padding: 0 10px;
+        }
+    }
 }
