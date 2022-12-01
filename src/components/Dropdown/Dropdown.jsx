@@ -1,5 +1,4 @@
 import React from 'react';
-import Links from '../Links/Links';
 import './Dropdown.scss';
 import CrossIcon from '../../assets/icon-cross.svg';
 

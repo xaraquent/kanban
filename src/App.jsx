@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import './App.scss';
 import Board from './components/Board/Board';
-import Sidebar from './components/Sidebar/Sidebar';
-import Navbar from './components/Navbar/Navbar';
-import Dropdown from './components/Dropdown/Dropdown';
 import CreateTicket from './components/CreateTicket/CreateTicket';
+import Dropdown from './components/Dropdown/Dropdown';
 import Links from './components/Links/Links';
+import Navbar from './components/Navbar/Navbar';
+import Sidebar from './components/Sidebar/Sidebar';
 
 function App() {
     // state for dropdown
@@ -14,7 +14,7 @@ function App() {
 
     return (
         <div className='App'>
-            <Navbar toggleDropdown={setShowAddTicket} />
+            <Navbar setShowAddTicket={setShowAddTicket} setIsOpen={setIsOpen} isOpen={isOpen} />
             <main>
                 <Sidebar />
                 <Board />

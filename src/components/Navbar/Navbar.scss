@@ -17,8 +17,14 @@
     }
 }
 
-.navbar-board-name{
-flex: 1;
+.navbar-board{
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+  img {
+    max-width: 20px;
+  }
 }
 
 .navbar-add-ticket{
@@ -45,9 +51,12 @@ flex: 1;
             display: none;
         }
     }
-    .navbar-board-name {
+    .navbar-board {
         h2 {
             padding: 0 10px;
         }
+        img {
+            display: block;
+          }
     }
 }

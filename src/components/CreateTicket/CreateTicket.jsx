@@ -1,16 +1,17 @@
 import React, { useState, useContext } from 'react';
 import './CreateTicket.scss';
 import { BoardContext } from '../../context/BoardContext';
+import { v4 as uuidv4 } from 'uuid';
 
-const CreateTicket = () => {
+export default function CreateTicket() {
     const { createTicket } = useContext(BoardContext);
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
-    const [subTask, setSubTask] = useState('');
+    const [subTask, setSubtask] = useState('');
 
     return (
         <div className='create-ticket'>
-            <h3 className='heading-m'>Add New Task {title}</h3>
+            <h3 className='heading-l'>Add New Title {title}</h3>
             <div>
                 <label htmlFor='' className='body-m'>
                     Title
@@ -26,40 +27,37 @@ const CreateTicket = () => {
                     Description
                 </label>
                 <input
-                    placeholder='e.g take a coffee break on monday with a friend'
+                    placeholder='e.g eat pasta carbonara and drink wine '
                     type='text'
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                 />
 
                 <label htmlFor='' className='body-m'>
-                    Sub Task
+                    Subtask
                 </label>
                 <input
                     placeholder='e.g do a back flip'
                     type='text'
                     value={subTask}
-                    onChange={(e) => setSubTask(e.target.value)}
+                    onChange={(e) => setSubtask(e.target.value)}
                 />
             </div>
-
             <button
                 onClick={() => {
                     createTicket({
-                        id: 'hej',
-                        title,
-                        description,
+                        id: uuidv4(),
+                        title: title,
+                        description: description,
                         tasks: [subTask],
                     });
                     setTitle('');
                     setDescription('');
-                    setSubTask('');
+                    setSubtask('');
                 }}
             >
                 Create Task
             </button>
         </div>
     );
-};
-
-export default CreateTicket;
+}

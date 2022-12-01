@@ -8,9 +8,15 @@ const BoardContextProvider = ({ children }) => {
     const [projects, setProjects] = useState(projectsData);
     const [projectIndex, setProjectIndex] = useState(0);
     const currentProject = projects[projectIndex];
+    // const [currentProject, setCurrentProject] = useState(projects[projectIndex]);
 
     const changeBoard = (index) => {
         setProjectIndex(index);
+    };
+
+    const changeCurrentBoard = (board) => {
+        projects[projectIndex].board = board;
+        setProjects([...projects]);
     };
 
     const addNewProject = (title) => {
@@ -22,15 +28,15 @@ const BoardContextProvider = ({ children }) => {
             board: [
                 {
                     name: 'Todo',
-                    tickets: [],
+                    items: [],
                 },
                 {
                     name: 'Doing',
-                    tickets: [],
+                    items: [],
                 },
                 {
                     name: 'Done',
-                    tickets: [],
+                    items: [],
                 },
             ],
         };
@@ -39,7 +45,7 @@ const BoardContextProvider = ({ children }) => {
     };
 
     const createTicket = (ticket) => {
-        projects[projectIndex].board[0].tickets.push(ticket);
+        projects[projectIndex].board.stage1.items.push(ticket);
         setProjects([...projects]);
     };
 
@@ -49,6 +55,7 @@ const BoardContextProvider = ({ children }) => {
         changeBoard,
         addNewProject,
         createTicket,
+        changeCurrentBoard,
     };
 
     return <BoardContext.Provider value={value}>{children}</BoardContext.Provider>;
