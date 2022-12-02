@@ -2,7 +2,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 export const projectsData = [
     {
-        title: 'Placa Board',
+        title: 'Place Board',
         id: 1,
         board: {
             stage1: {
@@ -28,30 +28,6 @@ export const projectsData = [
                     },
                     {
                         id: uuidv4(),
-                        title: 'Context Bug',
-                        description: 'This is one of the longest descriptions ever',
-                        tasks: ['Fix types at the same time'],
-                    },
-                    {
-                        id: uuidv4(),
-                        title: 'Datalake team need config',
-                        description: '',
-                        tasks: ['Fix types at the same time'],
-                    },
-                    {
-                        id: uuidv4(),
-                        title: 'i18n english',
-                        description: 'Setup json and NPM',
-                        tasks: ['Fix types at the same time'],
-                    },
-                    {
-                        id: uuidv4(),
-                        title: 'Context Bug',
-                        description: 'This is one of the longest descriptions ever',
-                        tasks: ['Fix types at the same time'],
-                    },
-                    {
-                        id: uuidv4(),
                         title: 'Datalake team need config',
                         description: '',
                         tasks: ['Fix types at the same time'],
@@ -73,16 +49,41 @@ export const projectsData = [
                         description: 'This is one of the longest descriptions ever',
                         tasks: ['Fix types at the same time'],
                     },
+                    {
+                        id: uuidv4(),
+                        title: 'Context Bug',
+                        description: 'This is one of the longest descriptions ever',
+                        tasks: ['Fix types at the same time'],
+                    },
                 ],
             },
             stage3: {
                 name: 'Done',
-                items: [],
+                items: [
+                    {
+                        id: uuidv4(),
+                        title: 'Context Bug',
+                        description: 'This is one of the longest descriptions ever',
+                        tasks: ['Fix types at the same time'],
+                    },
+                    {
+                        id: uuidv4(),
+                        title: 'Datalake team need config',
+                        description: '',
+                        tasks: ['Fix types at the same time'],
+                    },
+                    {
+                        id: uuidv4(),
+                        title: 'i18n english',
+                        description: 'Setup json and NPM',
+                        tasks: ['Fix types at the same time'],
+                    },
+                ],
             },
         },
     },
     {
-        title: 'Jira Board',
+        title: 'Messi Plays',
         id: 2,
         board: {
             stage1: {
@@ -90,8 +91,26 @@ export const projectsData = [
                 items: [
                     {
                         id: uuidv4(),
-                        title: 'Test Bug',
-                        description: 'This is one of the longest descriptions ever',
+                        title: 'Hahahaha',
+                        description: 'Amazing plays',
+                        tasks: ['Fix types at the same time'],
+                    },
+                    {
+                        id: uuidv4(),
+                        title: 'Datalake team need config',
+                        description: '',
+                        tasks: ['Fix types at the same time'],
+                    },
+                    {
+                        id: uuidv4(),
+                        title: 'Datalake team need config',
+                        description: '',
+                        tasks: ['Fix types at the same time'],
+                    },
+                    {
+                        id: uuidv4(),
+                        title: 'i18n english',
+                        description: 'Setup json and NPM',
                         tasks: ['Fix types at the same time'],
                     },
                 ],
@@ -103,13 +122,26 @@ export const projectsData = [
                         id: uuidv4(),
                         title: 'Portal for modals',
                         description: 'This is one of the longest descriptions ever',
-                        tasks: ['Types and modal refs, get cookies to work with auth'],
+                        tasks: ['Fix types at the same time'],
                     },
                 ],
             },
             stage3: {
                 name: 'Done',
-                items: [],
+                items: [
+                    {
+                        id: uuidv4(),
+                        title: 'Context Bug',
+                        description: 'This is one of the longest descriptions ever',
+                        tasks: ['Fix types at the same time'],
+                    },
+                    {
+                        id: uuidv4(),
+                        title: 'i18n english',
+                        description: 'Setup json and NPM',
+                        tasks: ['Fix types at the same time'],
+                    },
+                ],
             },
         },
     },

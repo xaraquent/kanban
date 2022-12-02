@@ -20,7 +20,7 @@ function App() {
                 <Board />
             </main>
             <Dropdown dropdown={showAddTicket} toggleDropdown={setShowAddTicket}>
-                <CreateTicket />
+                <CreateTicket toggleShowTicket={setShowAddTicket} />
             </Dropdown>
 
             <Dropdown dropdown={isOpen} toggleDropdown={setIsOpen}>

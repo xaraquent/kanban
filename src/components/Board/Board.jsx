@@ -14,7 +14,7 @@ export default function Board() {
         // Context
         const { destination, source } = result;
 
-        if (source.draggableId !== destination.draggableId) {
+        if (source.droppableId !== destination.droppableId) {
             //Columns
             const sourceColumn = currentProject.board[source.droppableId];
             const destinationColumn = currentProject.board[destination.droppableId];

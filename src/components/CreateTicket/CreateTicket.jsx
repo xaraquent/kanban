@@ -3,7 +3,7 @@ import './CreateTicket.scss';
 import { BoardContext } from '../../context/BoardContext';
 import { v4 as uuidv4 } from 'uuid';
 
-export default function CreateTicket() {
+export default function CreateTicket({ toggleShowTicket }) {
     const { createTicket } = useContext(BoardContext);
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
@@ -54,6 +54,7 @@ export default function CreateTicket() {
                     setTitle('');
                     setDescription('');
                     setSubtask('');
+                    toggleShowTicket((prev) => !prev);
                 }}
             >
                 Create Task
