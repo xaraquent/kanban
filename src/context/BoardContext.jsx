@@ -6,13 +6,9 @@ import { useLocalStorage } from '../Hooks/useLocalStorage';
 export const BoardContext = createContext();
 
 const BoardContextProvider = ({ children }) => {
-    const [projects, setProjects] = useState(projectsData);
+    const [projects, setProjects] = useLocalStorage('projects', projectsData);
     const [projectIndex, setProjectIndex] = useState(0);
     const currentProject = projects[projectIndex];
-
-    const [storage, setStorage] = useLocalStorage('kanban', projects);
-
-    // const [currentProject, setCurrentProject] = useState(projects[projectIndex]);
 
     const changeBoard = (index) => {
         setProjectIndex(index);
